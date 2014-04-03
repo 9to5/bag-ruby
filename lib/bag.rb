@@ -1,6 +1,6 @@
 require 'json'
 require 'httparty'
-require 'bag/config'
+
 require 'bag/base'
 require 'bag/adres'
 require 'bag/gemeente'
