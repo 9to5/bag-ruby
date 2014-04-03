@@ -8,7 +8,7 @@ class Bag::Gemeente < Bag::Base
   end
 
   def self.reverse_geocode(latitude, longitude)
-    response = get("/gemeentes/reverse_geocode.json", query: {longitude: longitude, latitude: latitude})
+    response = get("/gemeentes/reverse_geocode", query: {longitude: longitude, latitude: latitude})
     if response.success?
       self.new(response["gemeentecode"], response["gemeentenaam"])
     else
@@ -17,7 +17,7 @@ class Bag::Gemeente < Bag::Base
   end
 
   def self.find_by_id(id)
-    response = get("/gemeentes/#{id}.json")
+    response = get("/gemeentes/#{id}")
     if response.success?
       self.new(response["gemeentecode"], response["gemeentenaam"])
     else

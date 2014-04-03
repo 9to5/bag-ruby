@@ -16,7 +16,7 @@ class Bag::Adres < Bag::Base
   end
 
   def self.search(postcode, huisnummer=nil)
-    response = get("/postcodes/#{postcode}.json", query: huisnummer ? {huisnummer: huisnummer} : {})
+    response = get("/postcodes/#{postcode}", query: huisnummer ? {huisnummer: huisnummer} : {})
     result = []
     if response.success?
       response.each do |obj|

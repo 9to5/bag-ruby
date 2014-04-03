@@ -2,11 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://bag-api.dev/postcodes/2611.json
+    uri: http://bag-api.dev/postcodes/2611
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Version:
+      - v1
+      Content-Type:
+      - application/json
   response:
     status:
       code: 200
@@ -17,12 +21,12 @@ http_interactions:
       Content-Length:
       - '148'
       Date:
-      - Wed, 02 Apr 2014 14:41:43 GMT
+      - Thu, 03 Apr 2014 09:35:58 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '[{"latitude":52.012132496935635,"longitude":4.358811757361169,"postcode":"2611","woonplaats":"Delft","gemeente":"Delft","provincie":"Zuid-Holland"}]'
     http_version: 
-  recorded_at: Wed, 02 Apr 2014 14:41:43 GMT
+  recorded_at: Thu, 03 Apr 2014 09:35:58 GMT
 recorded_with: VCR 2.9.0

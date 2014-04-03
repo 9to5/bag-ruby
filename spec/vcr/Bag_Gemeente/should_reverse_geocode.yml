@@ -2,11 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://bag-api.dev/gemeentes/reverse_geocode.json?latitude=52.012895866977814&longitude=4.365448482452786
+    uri: http://bag-api.dev/gemeentes/reverse_geocode?latitude=52.012895866977814&longitude=4.365448482452786
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Version:
+      - v1
+      Content-Type:
+      - application/json
   response:
     status:
       code: 200
@@ -17,12 +21,12 @@ http_interactions:
       Content-Length:
       - '43'
       Date:
-      - Wed, 02 Apr 2014 14:43:00 GMT
+      - Thu, 03 Apr 2014 09:35:58 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"gemeentecode":503,"gemeentenaam":"Delft"}'
     http_version: 
-  recorded_at: Wed, 02 Apr 2014 14:43:00 GMT
+  recorded_at: Thu, 03 Apr 2014 09:35:58 GMT
 recorded_with: VCR 2.9.0
