@@ -20,10 +20,10 @@ class Bag::Adres < Bag::Base
     result = []
     if response.success?
       response.each do |obj|
-        result << self.new(obj["latitude"], obj["longitude"], obj["postcode"], obj["woonplaats"], obj["gemeente"], obj["provincie"], obj["straatnaam"], obj["huisnummer"], obj["huisletter"], obj["toevoeging"])
+        result << self.new(obj['latitude'], obj['longitude'], obj['postcode'], obj['woonplaats'], obj['gemeente'], obj['provincie'], obj['straatnaam'], obj['huisnummer'], obj['huisletter'], obj['toevoeging'])
       end
     else
-      raise response['error']
+      raise JSON.parse(response.parsed_response)['error']
     end
     result
   end
