@@ -22,6 +22,8 @@ class Bag::Adres < Bag::Base
       response.each do |obj|
         result << self.new(obj['latitude'], obj['longitude'], obj['postcode'], obj['woonplaats'], obj['gemeente'], obj['provincie'], obj['straatnaam'], obj['huisnummer'], obj['huisletter'], obj['toevoeging'])
       end
+    elsif response.code == 404
+      return nil
     else
       raise JSON.parse(response.parsed_response)['error']
     end

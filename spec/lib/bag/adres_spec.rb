@@ -10,7 +10,7 @@ describe Bag::Adres do
   end
 
   it 'should not fetch with pc6', :vcr do
-    expect { Bag::Adres.search('2611XX') }.to raise_error
+    expect(Bag::Adres.search('2611XX')).to be_nil
   end
 
   it 'should fetch with pc6 and huisnummer', :vcr do
