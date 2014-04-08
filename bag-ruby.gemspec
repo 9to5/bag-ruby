@@ -2,12 +2,12 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'bag/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'bag'
+  s.name        = 'bag-ruby'
   s.version     = Bag::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Tom Pesman']
   s.email       = ['tom@tnux.net']
-  s.homepage    = ''
+  s.homepage    = 'https://github.com/9to5/bag-ruby'
   s.summary     = %q{Gem to access the BAG API}
   s.description = %q{Gem to access the BAG API}
 
