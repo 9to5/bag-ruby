@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
   s.email       = ['tom@tnux.net']
   s.homepage    = 'https://github.com/9to5/bag-ruby'
   s.summary     = %q{Gem to access the BAG API}
-  s.description = %q{Gem to access the BAG API}
+  s.description = %q{Gem to access the BAG API. This gem provides helpers to communicate with the BAG API}
+  s.licenses    = ['MIT']
 
   s.add_runtime_dependency 'httparty'
   s.add_development_dependency 'rspec'
@@ -19,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'vcr'
   s.add_development_dependency 'webmock'
 
-  s.files         = Dir['README.md', 'lib/**/*']
+  s.files         = Dir['README.md', 'MIT-LICENSE', 'lib/**/*']
   s.test_files    = Dir['spec/**/*']
   s.require_paths = ['lib']
 end
