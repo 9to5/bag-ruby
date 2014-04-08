@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept-Version:
-      - v1
+      - v0
       Content-Type:
       - application/json
   response:
