@@ -25,7 +25,7 @@ class Bag::Adres < Bag::Base
     elsif response.code == 404
       return nil
     else
-      raise JSON.parse(response.parsed_response)['error']
+      raise response.parsed_response['error']
     end
     result
   end

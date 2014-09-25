@@ -17,7 +17,7 @@ class Bag::Gemeente < Bag::Base
     elsif response.code == 404
       return nil
     else
-      raise JSON.parse(response.parsed_response)['error']
+      raise response.parsed_response['error']
     end
     result
   end
@@ -29,7 +29,7 @@ class Bag::Gemeente < Bag::Base
     elsif response.code == 404
       return nil
     else
-      raise JSON.parse(response.parsed_response)['error']
+      raise response.parsed_response['error']
     end
   end
 
@@ -40,7 +40,7 @@ class Bag::Gemeente < Bag::Base
     elsif response.code == 404
       return nil
     else
-      raise JSON.parse(response.parsed_response)['error']
+      raise response.parsed_response['error']
     end
   end
 end
